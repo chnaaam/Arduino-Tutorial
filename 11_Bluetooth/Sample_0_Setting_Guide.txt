@@ -1,0 +1,38 @@
+
+(1) Hardware Configuration
+
+
+  - Connect IoT Starter Kit and Bluetooth module
+  Arduino      Bluetooth module
+    5V      -        VCC
+    GND    -        GND
+     2       -         Tx
+     3       -        Rx
+
+(2) Set HC-06 module
+
+***********
+Important : 아두이노 시리얼 모니터에서 테스트는 No line ending, 9600으로 설정하고 실행해야함..
+               New line, Carriage return 등으로 변경하면 통신 절대 안됨!!! 
+***********
+
+** Not Programming **
+**  - AT Command
+
+1) AT 
+ - Check if the device can communicate
+2) AT+ROLE=M / AT+ROLE=S
+ - Set master or slave mode
+3) AT+BAUD4
+ - Set baud rate (1 : 1200, 2 : 2400, 3 : 4800, 4 : 9600(Default), 5 : 19200...)
+4) AT+NAME{NAME}
+ - Set HC-06 device name
+5) AT+PIN{YOUR_PIN_NUMER_4}
+ - Set pin number (if you connect between master and slave module, must set same pin number)
+6) AT+RESET
+ - Hardware Reset
+
+
+
+
+
